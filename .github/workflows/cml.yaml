@@ -36,13 +36,14 @@ jobs:
           # Create a report file with initial content
           echo "Data Viz" > report.md
           
-          # Append comments on feature importance and residuals images to the report
-          for img in feature_importance.png residuals.png; do
-            cml comment $img >> report.md
-          done
+          {
+            echo "![Feature Importance](feature_importance.png)"
+            echo "![Residuals](residuals.png)"
+          } >> report.md
+
           
           # Create the report as a comment
-          cml comment create report.md
+          # cml comment create report.md
 
 
           
