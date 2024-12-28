@@ -30,14 +30,6 @@ jobs:
           echo "## Metrics"
           cat metrics.txt
 
-          cml comment create metrics.txt
-
-          echo "## Data Visualization"
-          echo "![Feature Importance](feature_importance.png)"
-          echo "![Residuals](residuals.png)"
-
-
-
           
           
           
