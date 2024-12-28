@@ -25,21 +25,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Correct environment variable
         run: |
           # Create a report file with model metrics
-          {
-            echo "# Model Performance Report"
-            echo "## Metrics"
-            cat metrics.txt
-          } > report.md
+          
+          echo "# Model Performance Report"
+          echo "## Metrics"
+          cat metrics.txt
 
-          # Append visualizations to the report
-          {
-            echo "## Data Visualization"
-            echo "![Feature Importance](feature_importance.png)"
-            echo "![Residuals](residuals.png)"
-          } >> report.md
+          echo "## Data Visualization"
+          echo "![Feature Importance](feature_importance.png)"
+          echo "![Residuals](residuals.png)"
 
-          # Post the report as a comment in the PR
-          cml comment create report.md
 
 
           
