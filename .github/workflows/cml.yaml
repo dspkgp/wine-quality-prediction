@@ -26,8 +26,12 @@ jobs:
         run: |
           # Post reports as comments in GitHub PRs
           
-          echo "Model Metrics" > report.md
-          cat metrics.txt >> report.md
+          # Create a report file with model metrics
+          {
+            echo "Model Metrics"
+            cat metrics.txt
+          } > report.md
+          
 
           # Create a report file with initial content
           echo "Data Viz" > report.md
