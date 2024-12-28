@@ -43,7 +43,7 @@ jobs:
 
           
           # Create the report as a comment
-          # cml comment create report.md
+          cml comment create report.md
 
 
           
